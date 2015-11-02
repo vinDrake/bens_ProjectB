@@ -1,0 +1,16 @@
+<h1>Players#index</h1>
+<p>Find me in app/views/players/index.html.erb</p>
+
+
+<% @players.each do |p| %>
+<%= p.name %>
+<%= link_to "Show", player_path(p) %>
+<br>
+<% end %>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %>
+<%= link_to 'Questions', questions_path %>
+<%= link_to 'Challenges', challenges_path %>
+<%= link_to 'Join Challenge', new_ticket_path %>

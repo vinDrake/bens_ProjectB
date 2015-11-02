@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 
+  challenge_id: 
+  complete: false
+  end_time: 2015-11-01 13:41:47
+
+two:
+  player_id: 
+  challenge_id: 
+  complete: false
+  end_time: 2015-11-01 13:41:47

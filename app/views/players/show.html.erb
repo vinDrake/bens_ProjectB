@@ -1,0 +1,27 @@
+<h1>Players#show</h1>
+<p>Find me in app/views/players/show.html.erb</p>
+
+ID<%= @player.id %> is
+<%= @player.name %><br>
+<%= @question_feed %><br>
+<% @questions %>
+<%= @question.problem %>
+<%= link_to "Show", question_path( @question) %>
+
+
+<br>
+
+<br>
+<% @player.answers.each do |a| %>
+  <%= a.question.problem %> <%= a.correct %><br>
+<% end %>
+<br>
+<% @player.questions.each do |q| %>
+  <%= q.problem %><br>
+<% end %>
+<br>
+
+<% @player.tickets.each do |t| %>
+  <%= t.challenge.name %> <%= t.complete %><br>
+<% end %>
+<%= link_to 'Back', players_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  correct: false
+  guess: MyString
+  player_id: 
+  question_id: 
+
+two:
+  correct: false
+  guess: MyString
+  player_id: 
+  question_id: 

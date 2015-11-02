@@ -1,0 +1,7 @@
+<h1>Answers#index</h1>
+<p>Find me in app/views/answers/index.html.erb</p>
+
+<% @answers.each do |a| %>
+  <%= a.player %> <%= a.question.problem %> <%= a.guess %> <%= a.correct %><br>
+
+<% end %>

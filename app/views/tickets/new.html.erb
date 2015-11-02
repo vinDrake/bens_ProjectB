@@ -1,0 +1,11 @@
+<h1>Tickets#new</h1>
+<p>Find me in app/views/tickets/new.html.erb</p>
+
+
+<%= form_for @ticket do |f| %>
+  <%= f.select :challenge_id, @challenge_select.map {|p| [p.name,p.id]} %><br>
+  <%= f.datetime_select :end_time %><br>
+  <%= f.check_box :complete %><br>
+  <%= f.submit %>
+
+<% end %>

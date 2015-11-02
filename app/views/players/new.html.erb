@@ -1,0 +1,13 @@
+<h1>Players#new</h1>
+<p>Find me in app/views/players/new.html.erb</p>
+
+
+<%= form_for @player  do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.text_field :email %>
+<%= f.text_field :password %>
+
+<%= f.submit "Create" %>
+
+<% end %>

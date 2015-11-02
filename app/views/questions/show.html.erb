@@ -1,0 +1,32 @@
+<h1>Questions#show</h1>
+<p>Find me in app/views/questions/show.html.erb</p>
+
+Therm:
+<%= @question.problem %><br>
+Correct Answer:
+<%= @question.correct_answer %><br>
+Wrong Answer:
+<%= @question.wrong_answers %><br>
+Category:
+<%= @question.category %><br>
+
+<br>
+<% @question.answers.each do |a| %>
+  <%= a.correct %><%= a.player_id %>
+<br>
+<% end %>
+<br>
+<%= @player.id %>
+<%= form_for([ @question, @question.answers.build ]) do |f| %>
+<%= f.hidden_field :player_id, { :value => @player.id } %>
+<%= f.hidden_field :result, { :value => "UiUiUi" } %>
+<% @answers.each do |a| %>
+<%= f.radio_button :guess , a  %> <%= a %>
+<% end %>
+
+<%= f.check_box :correct %><br>
+<%= f.submit %><br>
+<% end %>
+
+<br>
+<%= link_to "Back", questions_path %>

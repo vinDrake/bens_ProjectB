@@ -1,0 +1,18 @@
+<h1>Questions#index</h1>
+<p>Find me in app/views/questions/index.html.erb</p>
+
+
+<% @questions.each do |q| %>
+<%= q.problem %>?
+<%= q.correct_answer %>!
+<%= q.wrong_answers %>
+<%= q.category %>
+<br>
+<%= link_to "Show", question_path(q) %>
+<br>
+<% end %>
+
+<br>
+
+<%= link_to "New Question", new_question_path %>
+<%= link_to "Players", players_path %>
